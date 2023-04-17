@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"    # Example port mapping for server service
+    volumes:
+      - ./server/app:/app    # Example volume mapping for server service
+
+  client:
+    build: ./client
+    volumes:
+      - ./client/app:/app    # Example volume mapping for client service
